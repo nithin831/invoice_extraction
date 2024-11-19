@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  db:
+    image: mongo:latest
+    container_name: mongodb
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+      
+  web:
+    build: .
+    container_name: django_web
+    image: azoneslab/invioce_extraction:db1
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./invoice:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      # - MONGO_URI=mongodb://db:27017
+      - DJANGO_SETTINGS_MODULE=invoice.settings
+      - endpoint=${endpoint}
+      - key=${key}
+
+volumes:
+  mongo_data:
+    

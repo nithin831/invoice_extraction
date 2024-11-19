@@ -1,0 +1,54 @@
+
+    /* Styling for the navigation tabs */
+    .nav-tabs {
+        border-bottom: 2px solid #ddd;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+    }
+
+    .nav-tabs .nav-item {
+        margin-bottom: -1px;
+    }
+
+    .nav-tabs .nav-link {
+        color: #007bff; /* Blue color for tabs */
+        border: 1px solid transparent;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 10px 15px;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .nav-tabs .nav-link:hover {
+        background-color: #e9ecef;
+        border-color: #ddd #ddd #f9f9f9;
+    }
+
+    .nav-tabs .nav-link.active {
+        background-color: #fff;
+        border-color: #ddd #ddd transparent;
+        color: #495057;
+        font-weight: bold;
+    }
+
+    /* Extra padding for the tab content to make it more spacious */
+    .tab-content {
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-top: none;
+        background-color: #fff;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    /* Optional: custom colors for the active tab */
+    .nav-tabs .nav-link.active {
+        background-color: #4CAF50; /* Green background for the active tab */
+        color: white; /* White text for the active tab */
+        border-color: #4CAF50;
+    }
+
+    /* Customize tab text hover color */
+    .nav-tabs .nav-link:hover {
+        color: #0056b3;
+    }
